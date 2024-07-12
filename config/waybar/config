@@ -1,0 +1,80 @@
+//Custom config
+//ooooooooooh
+//
+{
+  "layer": "top",
+  "margin-top": 5,
+  "margin-bottom": 0,
+
+  "modules-left": [
+    "custom/appmenu",
+    "hyprland/window",
+    "tray"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "clock"
+  ],
+  "custom/appmenu": {
+      "format": "󰣇 |"
+    },
+  "hyprland/window": {
+      "format": "{title}"
+    },
+  "hyprland/workspaces": {
+    "activate-only": false,
+    "format": "{icon}",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+     },
+  "tray": {
+      "spacing": 10
+    },
+  "battery": {
+        "bat": "BAT0",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+  "pulseaudio": {
+      "format": "{icon} {volume:2}%",
+      "format-bluetooth": "{icon} {volume}%",
+      "format-muted": "",
+      "format-icons": {
+			  "headphones": "",
+			  "default": [
+			  	"",
+			  	""
+			  ]
+      },
+      "on-click": "pavucontrol"
+    },
+  "network": {
+      // "interface": "wlp2s0", // (Optional) To force the use of this interface
+      "format-wifi": "{essid} ({signalStrength}%) ",
+      "format-ethernet": "",
+      "format-disconnected": "Disconnected ⚠"
+    },
+  "clock": {
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		  "format": "{:%I:%M   %d/%m 󰸗 }",
+		  "format-alt": "{:%H:%M   %d/%m 󰸗 }",
+		  "interval": 1
+    }
+}
+
